@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "userCollection",
+    "dateExported": "2024-02-27T07:14:29.512Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8c83dcd1-9dca-48a6-9b8e-d7986b1392d8",
+            "colId": "44c3bbc8-0868-44fb-9444-672e5f1a0e02",
+            "containerId": "",
+            "name": "userPost",
+            "url": "http://localhost:3000/gestorOpiniones/v1/users",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-27T06:35:25.984Z",
+            "modified": "2024-02-27T06:54:25.811Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"test6Username\",\n  \"email\": \"test6@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "237774ee-2825-4ac1-89d0-a3aeb1ac2f78",
+            "colId": "44c3bbc8-0868-44fb-9444-672e5f1a0e02",
+            "containerId": "",
+            "name": "userGet",
+            "url": "http://localhost:3000/gestorOpiniones/v1/users",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-27T06:53:42.936Z",
+            "modified": "2024-02-27T06:56:50.390Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4f14eef1-88f3-4b70-8b76-73be438c0c32",
+            "colId": "44c3bbc8-0868-44fb-9444-672e5f1a0e02",
+            "containerId": "",
+            "name": "userGetById",
+            "url": "http://localhost:3000/gestorOpiniones/v1/users/65dd8361da7e10bad09277a7",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-27T06:57:01.920Z",
+            "modified": "2024-02-27T06:57:19.404Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "728b702b-13d5-4e67-abdb-74bd00235c2f",
+            "colId": "44c3bbc8-0868-44fb-9444-672e5f1a0e02",
+            "containerId": "",
+            "name": "userPut",
+            "url": "http://localhost:3000/gestorOpiniones/v1/users/65dd8721da7e10bad09277b9",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-27T06:57:53.905Z",
+            "modified": "2024-02-27T07:10:24.202Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"juandaxdxd9\",\n  \"email\": \"juandax@gmail.com\",\n  \"newEmail\": \"juandaxd@gmail.com\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
