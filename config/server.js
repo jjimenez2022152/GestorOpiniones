@@ -6,7 +6,8 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 import { dbConnection } from './mongo.js';
 import userRoutes from '../src/users/user.routes.js';
-import authRoutes from '../src/auth/auth.routes.js'
+import authRoutes from '../src/auth/auth.routes.js';
+//import publicationRoutes from '../src/publications/publication.routes.js';
 
 class Server {
     constructor() {
@@ -14,6 +15,8 @@ class Server {
         this.port = process.env.PORT;
         this.usuarioPath = '/gestorOpiniones/v1/users'
         this.authPath = '/gestorOpiniones/v1/auth'
+        this.publicationPath = '/gestorOpiniones/v1/publications'; // Ruta base para las publicaciones
+        //this.commentPath = '/gestorOpiniones/v1/comments'; // Ruta base para los comentarios
 
         this.middlewares();
         this.conectarDB();

@@ -1,36 +1,27 @@
 import mongoose from 'mongoose';
 
-const UserSchema = mongoose.Schema({
-    username: {
+const PublicacionSchema = mongoose.Schema({
+    titulo: {
         type: String,
-        required: [true, "The username is required"],
+        required: true
     },
-    email: {
+    categoria: {
         type: String,
-        required: [true, "Email is necessary"],
-        unique: true,
+        required: true
     },
-    newPassword: {
-        type: String
-    },
-    password: {
+    texto: {
         type: String,
-        required: [true, "Password is required"],
+        required: true
     },
-    estado: {
-        type: Boolean,
-        default: true,
+    usuario: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Usuario',
+        required: true
     },
-    google: {
-        type: Boolean,
-        default: true,
-    },
+    comentarios: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comentario'
+    }]
 });
 
-UserSchema.methods.toJSON = function() {
-    const { __v, password, _id, ...usuario } = this.toObject();
-    usuario.uid = _id;
-    return usuario;
-}
-
-export default mongoose.model('User', UserSchema);
+export default mongoose.model('Publicacion', PublicacionSchema);
