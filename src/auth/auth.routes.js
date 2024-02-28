@@ -1,17 +1,18 @@
 import { Router } from "express";
 import { check } from "express-validator";
-
-import { validarCampos } from "../middlewares/validarCampos.js"
+import { validarCampos } from "../middlewares/validarCampos.js";
 import { login } from "./auth.controller.js";
 
-const router = Router()
+const router = Router();
 
 router.post(
     '/login',
     [
-        check('user', 'Correo necesario').not().isEmpty(),
-        check('password', 'Contraseña necesaria').not().isEmpty(),
+        check('usuario', 'The email or username is obligatory').not().isEmpty(),
+        check('password', 'The password is obligatory').not().isEmpty(),
         validarCampos,
-    ], login)
+    ],
+    login
+);
 
-    export default router
+export default router;
