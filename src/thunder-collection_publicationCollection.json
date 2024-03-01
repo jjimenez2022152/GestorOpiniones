@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "publicationCollection",
-    "dateExported": "2024-03-01T06:48:07.707Z",
+    "dateExported": "2024-03-01T07:02:55.260Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -60,6 +60,30 @@
             "modified": "2024-03-01T05:54:31.087Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6e12765b-418c-4013-8a1d-5aed55b7aad5",
+            "colId": "e8bcc923-4a3b-4ef8-9493-e71b7a3e9dd2",
+            "containerId": "",
+            "name": "publicationPut",
+            "url": "http://localhost:3000/gestorOpiniones/v1/publications/65e16b54139986360ffa9100",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-03-01T06:53:59.038Z",
+            "modified": "2024-03-01T07:01:50.488Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNTcxYzVlODNmNjExOTJlMzllYzciLCJpYXQiOjE3MDkyNzYzNzMsImV4cCI6MTcwOTI3OTk3M30._S7NFzHCLo2tNfomUW6KiCz8ykN_OuOReSWSCBZ5zBE"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"El Viaje a Machupichiuuuuuu\",\n  \"categoria\": \"Viaje\",\n  \"texto\": \"Machupichu es gooood\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]
