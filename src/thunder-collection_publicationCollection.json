@@ -1,0 +1,66 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "publicationCollection",
+    "dateExported": "2024-03-01T06:48:07.707Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fbcf99c8-7bd2-48db-849c-f6723453a585",
+            "colId": "e8bcc923-4a3b-4ef8-9493-e71b7a3e9dd2",
+            "containerId": "",
+            "name": "publicationPost",
+            "url": "http://localhost:3000/gestorOpiniones/v1/publications/crear",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-01T04:05:17.225Z",
+            "modified": "2024-03-01T06:42:48.033Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNzc2YTRhOGIwZWQ4YTg4OTQ5ZmIiLCJpYXQiOjE3MDkyNzUyNzUsImV4cCI6MTcwOTI3ODg3NX0.DrbSpY6uqF33S2vsmsk471pyIL-wkEQIzpaOKKOU2po"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"titulo\": \"El nuevo sabor de Oreo\",\n  \"categoria\": \"Comida\",\n  \"texto\": \"llega el nuevo sabor de oreo\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "121f5f25-5c15-4d39-918f-1d79ececd59d",
+            "colId": "e8bcc923-4a3b-4ef8-9493-e71b7a3e9dd2",
+            "containerId": "",
+            "name": "publicationDelete",
+            "url": "http://localhost:3000/gestorOpiniones/v1/publications/65e178e84a8b0ed8a8894a08",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-03-01T05:47:48.890Z",
+            "modified": "2024-03-01T06:44:35.806Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNzc2YTRhOGIwZWQ4YTg4OTQ5ZmIiLCJpYXQiOjE3MDkyNzUyNzUsImV4cCI6MTcwOTI3ODg3NX0.DrbSpY6uqF33S2vsmsk471pyIL-wkEQIzpaOKKOU2po"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "096c6c3b-f43a-460c-8277-a280df115afd",
+            "colId": "e8bcc923-4a3b-4ef8-9493-e71b7a3e9dd2",
+            "containerId": "",
+            "name": "publicationGet",
+            "url": "http://localhost:3000/gestorOpiniones/v1/publications",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-03-01T05:50:28.435Z",
+            "modified": "2024-03-01T05:54:31.087Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

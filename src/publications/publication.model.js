@@ -15,7 +15,7 @@ const PublicacionSchema = mongoose.Schema({
     },
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Usuario',
+        ref: 'User',
         required: true
     },
     comentarios: [{
