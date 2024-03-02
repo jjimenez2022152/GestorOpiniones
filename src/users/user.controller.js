@@ -44,7 +44,7 @@ export const getUsuarioById = async (req, res) => {
 
 export const usuariosPut = async (req, res) => {
     const { id } = req.params;
-    const { _id, password, username, email, newPassword, ...resto } = req.body; // Cambia newEmail por newPassword
+    const { password, username, email, newPassword, ...resto } = req.body;
 
     try {
         const usuario = await User.findById(id);
@@ -60,23 +60,30 @@ export const usuariosPut = async (req, res) => {
             return res.status(400).json({ msg: 'La contraseña actual es obligatoria para cambiarla.' });
         }
 
-        // Verificar si la contraseña actual coincide
         const isPasswordCorrect = await bcryptjs.compare(password, usuario.password);
         if (!isPasswordCorrect) {
             return res.status(400).json({ msg: 'La contraseña actual es incorrecta.' });
         }
 
-        // Generar el hash de la nueva contraseña
-        const salt = bcryptjs.genSaltSync();
-        resto.password = bcryptjs.hashSync(newPassword, salt);
+        if (username) {
+            usuario.username = username;
+        }
 
-        await User.findByIdAndUpdate(id, resto, { new: true });
+        if (newPassword) {
+            const salt = bcryptjs.genSaltSync();
+            usuario.password = bcryptjs.hashSync(newPassword, salt);
+        }
+        
+        Object.keys(resto).forEach(key => {
+            usuario[key] = resto[key];
+        });
+
+        await usuario.save();
 
         res.status(200).json({
             msg: 'Usuario actualizado con éxito',
             id,
-            username,
-            newPassword // Devuelve newPassword en la respuesta
+            username: usuario.username,
         });
 
     } catch (error) {
