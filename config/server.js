@@ -8,6 +8,8 @@ import { dbConnection } from './mongo.js';
 import userRoutes from '../src/users/user.routes.js';
 import authRoutes from '../src/auth/auth.routes.js';
 import publicationRoutes from '../src/publications/publication.routes.js';
+import comentRoutes from '../src/coments/coment.routes.js'
+
 
 class Server {
     constructor() {
@@ -15,8 +17,8 @@ class Server {
         this.port = process.env.PORT;
         this.usuarioPath = '/gestorOpiniones/v1/users'
         this.authPath = '/gestorOpiniones/v1/auth'
-        this.publicationPath = '/gestorOpiniones/v1/publications'; // Ruta base para las publicaciones
-        //this.commentPath = '/gestorOpiniones/v1/comments'; // Ruta base para los comentarios
+        this.publicationPath = '/gestorOpiniones/v1/publications'; 
+        this.comentPath = '/gestorOpiniones/v1/coment';
 
         this.middlewares();
         this.conectarDB();
@@ -39,6 +41,7 @@ class Server {
         this.app.use(this.usuarioPath, userRoutes);
         this.app.use(this.authPath, authRoutes);
         this.app.use(this.publicationPath, publicationRoutes);
+        this.app.use(this.comentPath, comentRoutes);
     }
 
     listen() {

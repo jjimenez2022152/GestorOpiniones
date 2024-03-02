@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 const ComentarioSchema = mongoose.Schema({
-    texto: {
+    comentario: {
         type: String,
         required: true
     },

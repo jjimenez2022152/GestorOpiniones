@@ -9,7 +9,7 @@ const router = Router();
 router.post(
     "/crear",
     [
-        check("texto", "El texto del comentario es requerido").not().isEmpty(),
+        check("comentario", "El comentario es requerido").not().isEmpty(), // Cambiado de 'texto' a 'comentario'
         check("publicacionId", "El ID de la publicación es requerido").not().isEmpty(),
         validarCampos,
         validarJWT

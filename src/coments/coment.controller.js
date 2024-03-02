@@ -3,12 +3,12 @@ import User from '../users/user.model.js';
 
 export const agregarComentario = async (req, res) => {
     const user = req.usuario; 
-    const { texto, publicacionId } = req.body;
+    const { comentario, publicacionId } = req.body;
 
     try {
         // Crear el comentario
         const nuevoComentario = new Comentario({
-            texto,
+            comentario, // Cambiado de 'texto' a 'comentario'
             usuario: user._id,
             publicacion: publicacionId
         });
