@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { agregarComentario } from "./comentario.controller.js"; // Importa el controlador de comentarios
+import { agregarComentario } from "./coment.controller.js"; // Importa el controlador de comentarios
 import { validarCampos } from "../middlewares/validarCampos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 

@@ -71,6 +71,8 @@ export const publicationsGet = async (req, res) => {
     }
 };
 
+
+
 export const publicationsPut = async (req, res) => {
     const user = req.usuario;
     const publicationId = req.params.id;
