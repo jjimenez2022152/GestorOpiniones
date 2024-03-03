@@ -7,12 +7,12 @@ const ComentarioSchema = mongoose.Schema({
     },
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Usuario',
+        ref: 'User',
         required: true
     },
-    publicacion: {
+    publicacion: {  
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Publicacion',
+        ref: 'Publication',
         required: true
     }
 });

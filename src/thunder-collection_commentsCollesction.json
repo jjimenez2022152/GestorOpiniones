@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "commentsCollesction",
+    "dateExported": "2024-03-03T05:38:15.944Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8c3c1eae-adac-4180-9b5c-272170073c6b",
+            "colId": "6907778a-0e48-4e64-91b2-3745294c0c80",
+            "containerId": "",
+            "name": "comment Post",
+            "url": "http://localhost:8080/opinionControl/v1/comment/add",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-03-03T05:02:14.734Z",
+            "modified": "2024-03-03T05:04:48.566Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzMjgxNWYyNjA1YmY1OWZjMzc4NDAiLCJpYXQiOjE3MDk0NDIxNzYsImV4cCI6MTcwOTQ0NTc3Nn0.XaRf6stumwEyZPInqO6D9qa4CkyOLzRsQJXm1O_eB9c"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"contenido\": \"Grandioso viaje\",\r\n    \"idPublicacion\": \"65e3f80c685a5d37bbe8ebdf\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "67ae39a6-06fe-41b9-a2e7-37433893365b",
+            "colId": "6907778a-0e48-4e64-91b2-3745294c0c80",
+            "containerId": "",
+            "name": "get comment",
+            "url": "http://localhost:8080/opinionControl/v1/comment",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-03T05:09:57.996Z",
+            "modified": "2024-03-03T05:11:19.790Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6b4c4150-2318-487e-bb44-b6f573e9870b",
+            "colId": "6907778a-0e48-4e64-91b2-3745294c0c80",
+            "containerId": "",
+            "name": "comment put",
+            "url": "http://localhost:8080/opinionControl/v1/comment/65e404f190b57512102a745e",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-03-03T05:11:43.048Z",
+            "modified": "2024-03-03T05:13:47.112Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzMjgxNWYyNjA1YmY1OWZjMzc4NDAiLCJpYXQiOjE3MDk0NDIxNzYsImV4cCI6MTcwOTQ0NTc3Nn0.XaRf6stumwEyZPInqO6D9qa4CkyOLzRsQJXm1O_eB9c"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"contenido\": \"Este es el nuevo contenido del comentario\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "32767d9c-38cb-4044-80b9-d342f31a2777",
+            "colId": "6907778a-0e48-4e64-91b2-3745294c0c80",
+            "containerId": "",
+            "name": "comment delete",
+            "url": "http://localhost:8080/opinionControl/v1/comment/65e404f190b57512102a745e",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-03-03T05:31:32.369Z",
+            "modified": "2024-03-03T05:34:16.510Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUzMjgxNWYyNjA1YmY1OWZjMzc4NDAiLCJpYXQiOjE3MDk0NDIxNzYsImV4cCI6MTcwOTQ0NTc3Nn0.XaRf6stumwEyZPInqO6D9qa4CkyOLzRsQJXm1O_eB9c"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

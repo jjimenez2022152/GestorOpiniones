@@ -1,20 +1,20 @@
 {
     "client": "Thunder Client",
     "collectionName": "loginCollection",
-    "dateExported": "2024-03-02T08:23:55.104Z",
+    "dateExported": "2024-03-03T08:10:25.559Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "775b65a8-9c2a-4eb4-ab42-6451c2c78196",
-            "colId": "06c5d99a-caac-411a-a020-e8e54bdd981c",
+            "_id": "d1f52c8e-7d31-49ce-8ecd-a63132e0e931",
+            "colId": "3eb456eb-f9fe-42b9-9610-0ef3ea61d8e2",
             "containerId": "",
             "name": "loginPost",
-            "url": "http://localhost:3000/gestorOpiniones/v1/auth/login",
+            "url": "http://localhost:8080/gestorOpiniones/v1/auth/login",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-02T07:58:36.298Z",
-            "modified": "2024-03-02T08:21:49.404Z",
+            "created": "2024-03-03T06:48:39.899Z",
+            "modified": "2024-03-03T06:50:11.104Z",
             "headers": [],
             "params": [],
             "body": {

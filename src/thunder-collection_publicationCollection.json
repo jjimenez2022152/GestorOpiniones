@@ -1,44 +1,44 @@
 {
     "client": "Thunder Client",
     "collectionName": "publicationCollection",
-    "dateExported": "2024-03-02T08:24:00.663Z",
+    "dateExported": "2024-03-03T08:10:30.503Z",
     "version": "1.1",
     "folders": [],
     "requests": [
         {
-            "_id": "7f0b6841-2a7c-4f63-8b72-687a718c054e",
-            "colId": "48053068-ab9c-4eb6-b778-833056b3fdc4",
+            "_id": "19664c0a-0842-4752-ac67-dc2c201adb50",
+            "colId": "5c2e997c-311b-4309-99ea-631fb7de7c94",
             "containerId": "",
             "name": "publicationPost",
-            "url": "http://localhost:3000/gestorOpiniones/v1/publications/crear",
+            "url": "http://localhost:8080/gestorOpiniones/v1/publications/crear",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2024-03-02T07:58:36.305Z",
-            "modified": "2024-03-02T07:58:36.305Z",
+            "created": "2024-03-03T06:48:39.909Z",
+            "modified": "2024-03-03T07:44:33.792Z",
             "headers": [
                 {
                     "name": "x-token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUxNzc2YTRhOGIwZWQ4YTg4OTQ5ZmIiLCJpYXQiOjE3MDkyNzUyNzUsImV4cCI6MTcwOTI3ODg3NX0.DrbSpY6uqF33S2vsmsk471pyIL-wkEQIzpaOKKOU2po"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NWUyZGUxY2I1NTVlYzJkZWViNGUwZmIiLCJpYXQiOjE3MDk0NTE4NjUsImV4cCI6MTcwOTQ1NTQ2NX0.vFNNCw6bQvJQDlOEMTW6R-tyZuqf9tcjIKTIeTvqHw4"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"titulo\": \"El nuevo sabor de Oreo\",\n  \"categoria\": \"Comida\",\n  \"texto\": \"llega el nuevo sabor de oreo\"\n}",
+                "raw": "{\n  \"titulo\": \"Encontrameee\",\n  \"categoria\": \"Ayuda\",\n  \"texto\": \"Espero me encuentres\"\n}",
                 "form": []
             },
             "tests": []
         },
         {
-            "_id": "3c5a7af1-d26e-45e7-9e71-8c0940f325a4",
-            "colId": "48053068-ab9c-4eb6-b778-833056b3fdc4",
+            "_id": "6ff93f07-aa56-4093-b06f-c06ad04d0d89",
+            "colId": "5c2e997c-311b-4309-99ea-631fb7de7c94",
             "containerId": "",
             "name": "publicationDelete",
-            "url": "http://localhost:3000/gestorOpiniones/v1/publications/65e178e84a8b0ed8a8894a08",
+            "url": "http://localhost:8080/gestorOpiniones/v1/publications/65e178e84a8b0ed8a8894a08",
             "method": "DELETE",
             "sortNum": 30000,
-            "created": "2024-03-02T07:58:36.306Z",
-            "modified": "2024-03-02T07:58:36.306Z",
+            "created": "2024-03-03T06:48:39.910Z",
+            "modified": "2024-03-03T06:50:25.545Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -49,29 +49,29 @@
             "tests": []
         },
         {
-            "_id": "d6f54a7b-1897-4930-be25-a61a3aefe023",
-            "colId": "48053068-ab9c-4eb6-b778-833056b3fdc4",
+            "_id": "f92b9ed1-d99d-4a3a-a680-1631915b457d",
+            "colId": "5c2e997c-311b-4309-99ea-631fb7de7c94",
             "containerId": "",
             "name": "publicationGet",
-            "url": "http://localhost:3000/gestorOpiniones/v1/publications",
+            "url": "http://localhost:8080/gestorOpiniones/v1/publications",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2024-03-02T07:58:36.307Z",
-            "modified": "2024-03-02T07:58:36.307Z",
+            "created": "2024-03-03T06:48:39.911Z",
+            "modified": "2024-03-03T06:50:29.550Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "c131ee1f-26ff-40c2-aa49-a30d0eff0245",
-            "colId": "48053068-ab9c-4eb6-b778-833056b3fdc4",
+            "_id": "3da9e20b-b0e2-4bdc-963c-56e3ca09a888",
+            "colId": "5c2e997c-311b-4309-99ea-631fb7de7c94",
             "containerId": "",
             "name": "publicationPut",
-            "url": "http://localhost:3000/gestorOpiniones/v1/publications/65e16b54139986360ffa9100",
+            "url": "http://localhost:8080/gestorOpiniones/v1/publications/65e16b54139986360ffa9100",
             "method": "PUT",
             "sortNum": 50000,
-            "created": "2024-03-02T07:58:36.308Z",
-            "modified": "2024-03-02T07:58:36.308Z",
+            "created": "2024-03-03T06:48:39.912Z",
+            "modified": "2024-03-03T06:50:33.411Z",
             "headers": [
                 {
                     "name": "x-token",
