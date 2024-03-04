@@ -41,15 +41,15 @@ export const agregarComentario = async (req, res) => {
 
 export const getComments = async (req, res) => {
     try {
-        const comments = await Comentario.find().populate({
-            path: 'usuario',
-            select: 'email _id'
+        const comment = await Comment.find().populate({
+            path: 'usuario', 
+            select: 'email _id' 
         });
 
-        res.status(200).json(comments);
+        res.status(200).json(comment);
     } catch (error) {
         console.error('Error al obtener comentarios:', error);
-        res.status(500).json({ error: 'Error al obtener comentarios' });
+        res.status(500).json({ error: 'Error al obtener los comentarios' });
     }
 };
 
