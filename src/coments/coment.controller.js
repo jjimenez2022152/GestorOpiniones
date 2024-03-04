@@ -59,7 +59,7 @@ export const commentPut = async (req, res) => {
     const { comentario } = req.body;
 
     try {
-        const comment = await Comentario.findById(commentId);
+        const comment = await Comment.findById(commentId);
 
         if (!comment) {
             return res.status(404).json({ msg: 'El comentario no existe' });
@@ -85,7 +85,7 @@ export const commentDelete = async (req, res) => {
     const commentId = req.params.id;
 
     try {
-        const comment = await Comentario.findById(commentId);
+        const comment = await Comment.findById(commentId);
 
         if (!comment) {
             return res.status(404).json({ msg: 'El comentario no existe' });
@@ -95,7 +95,7 @@ export const commentDelete = async (req, res) => {
             return res.status(403).json({ msg: 'No tienes acceso para eliminar este comentario' });
         }
 
-        await Comentario.findByIdAndDelete(commentId);
+        await Comment.findByIdAndDelete(commentId);
 
         res.status(200).json({ msg: 'Comentario eliminado correctamente' });
     } catch (error) {
