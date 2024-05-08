@@ -5,15 +5,18 @@ const ComentarioSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    usuario: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
     publicacion: {  
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Publication',
         required: true
+    },
+    comentarioPadre: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Comentario',
+    },
+    estado : {
+        type: Boolean,
+        default: true
     }
 });
 

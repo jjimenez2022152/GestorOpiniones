@@ -2,7 +2,7 @@ import { Router } from "express";
 import { check } from "express-validator";
 import { publicationsPost, publicationsDelete, publicationsGet, publicationsPut } from "./publication.controller.js";
 import { validarCampos } from "../middlewares/validarCampos.js";
-import { validarJWT } from "../middlewares/validar-jwt.js";
+//import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router();
 
@@ -14,14 +14,14 @@ router.post(
         check("categoria", "La categoría es requerida").not().isEmpty(),
         check("texto", "El texto es requerido").not().isEmpty(),
         validarCampos,
-        validarJWT
+        //validarJWT
     ],
     publicationsPost
 );
 
 router.delete(
     "/:id",
-    validarJWT, 
+    //validarJWT, 
     publicationsDelete
 );
 
@@ -33,7 +33,7 @@ router.get(
 router.put(
     "/:id",
     [
-        validarJWT,
+        //validarJWT,
         check("titulo", "El título es requerido").not().isEmpty(),
         check("categoria", "La categoría es requerida").not().isEmpty(),
         check("texto", "El texto es requerido").not().isEmpty(),

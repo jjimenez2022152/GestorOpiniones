@@ -12,16 +12,7 @@ const PublicacionSchema = mongoose.Schema({
     texto: {
         type: String,
         required: true
-    },
-    usuario: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-    },
-    comentarios: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Comentario'
-    }]
+    }
 });
 
 export default mongoose.model('Publicacion', PublicacionSchema);

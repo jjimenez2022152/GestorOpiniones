@@ -15,7 +15,7 @@ router.post(
         check("comentario", "El comentario es requerido").not().isEmpty(),
         check("idPublicacion", "El ID de la publicación es requerido").not().isEmpty(), 
         validarCampos,
-        validarJWT
+        //validarJWT
     ],
     agregarComentario
 );
@@ -23,7 +23,7 @@ router.post(
 router.put(
     "/:id",
     [
-        validarJWT,
+        //validarJWT,
         check("comentario", "El comentario es obligatorio").not().isEmpty(),
         validarCampos
     ],
@@ -32,7 +32,7 @@ router.put(
 
 router.delete(
     "/:id",
-    validarJWT, 
+    //validarJWT, 
     commentDelete
 );
 

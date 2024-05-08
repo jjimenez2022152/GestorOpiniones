@@ -1,9 +1,8 @@
-import jwt from 'jsonwebtoken';
+//import jwt from 'jsonwebtoken';
 import Publication from './publication.model.js';
-import User from '../users/user.model.js';
+//import User from '../users/user.model.js';
 
 export const publicationsPost = async (req, res) => {
-    const user = req.usuario;
 
     const { titulo, categoria, texto } = req.body;
 
@@ -12,18 +11,15 @@ export const publicationsPost = async (req, res) => {
             titulo,
             categoria,
             texto,
-            usuario: user._id,
         });
 
         await publication.save();
 
-        const usuario = await User.findById(user._id);
 
         res.status(200).json({
             msg: 'Publicación agregada exitosamente',
             publication: {
                 ...publication.toObject(),
-                usuario: usuario.email
             }
         });
     } catch (error) {
@@ -59,10 +55,7 @@ export const publicationsDelete = async (req, res) => {
 
 export const publicationsGet = async (req, res) => {
     try {
-        const publications = await Publication.find().populate({
-            path: 'usuario', 
-            select: 'email _id' 
-        });
+        const publications = await Publication.find();
 
         res.status(200).json(publications);
     } catch (error) {

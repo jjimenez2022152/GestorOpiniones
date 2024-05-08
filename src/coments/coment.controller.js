@@ -1,10 +1,8 @@
 import Comment from './coment.model.js';
 import Publication from '../publications/publication.model.js'
-import User from '../users/user.model.js';
 
 export const agregarComentario = async (req, res) => {
-    const user = req.usuario;
-    const { comentario, idPublicacion } = req.body;
+    const { comentario, idPublicacion, comentarioPadre } = req.body;
 
     try {
         const publication = await Publication.findById(idPublicacion);
@@ -15,20 +13,18 @@ export const agregarComentario = async (req, res) => {
 
         const comment = new Comment({
             comentario,
-            usuario: user._id,
-            publicacion: idPublicacion
+            publicacion: idPublicacion,
+            ...(comentarioPadre ? {comentarioPadre} : {})
         });
 
         await comment.save();
 
-        const usuario = await User.findById(user._id);
 
         res.status(201).json({
             msg: 'Comentario agregado correctamente',
             comment: {
                 ...comment.toObject(),
                 tituloPublicacion: publication.titulo,
-                usuario: usuario.correo
             }
         });
 
@@ -41,11 +37,8 @@ export const agregarComentario = async (req, res) => {
 
 export const getComments = async (req, res) => {
     try {
-        const comment = await Comment.find().populate({
-            path: 'usuario', 
-            select: 'email _id' 
-        });
-
+        const comment = await Comment.find({estado : true});
+        
         res.status(200).json(comment);
     } catch (error) {
         console.error('Error al obtener comentarios:', error);
