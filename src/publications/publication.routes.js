@@ -13,6 +13,7 @@ router.post(
         check("titulo", "El título es requerido").not().isEmpty(),
         check("categoria", "La categoría es requerida").not().isEmpty(),
         check("texto", "El texto es requerido").not().isEmpty(),
+        check("avatarUrl", "el url de la Publicacion es requerido").not().isEmpty(),
         validarCampos,
         //validarJWT
     ],

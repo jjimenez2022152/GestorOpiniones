@@ -12,7 +12,11 @@ const PublicacionSchema = mongoose.Schema({
     texto: {
         type: String,
         required: true
-    }
+    },
+    avatarUrl:{
+        type: String,
+        default: 'none'
+    },
 });
 
 export default mongoose.model('Publicacion', PublicacionSchema);
