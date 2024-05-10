@@ -4,14 +4,15 @@ import Publication from './publication.model.js';
 
 export const publicationsPost = async (req, res) => {
 
-    const { titulo, categoria, texto, avatarUrl } = req.body;
+    const { titulo, categoria, texto, avatarUrl, gitHub } = req.body;
 
     try {
         const publication = new Publication({
             titulo,
             categoria,
             texto,
-            avatarUrl
+            avatarUrl,
+            gitHub,
         });
 
         await publication.save();

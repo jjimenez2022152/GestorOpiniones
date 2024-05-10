@@ -14,6 +14,7 @@ router.post(
         check("categoria", "La categoría es requerida").not().isEmpty(),
         check("texto", "El texto es requerido").not().isEmpty(),
         check("avatarUrl", "el url de la Publicacion es requerido").not().isEmpty(),
+        check("gitHub", "el url de gitHub es requerido").not().isEmpty(),
         validarCampos,
         //validarJWT
     ],

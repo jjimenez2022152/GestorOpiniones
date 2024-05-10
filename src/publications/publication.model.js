@@ -17,6 +17,10 @@ const PublicacionSchema = mongoose.Schema({
         type: String,
         default: 'none'
     },
+    gitHub:{
+        type: String,
+        default: 'none'
+    },
 });
 
 export default mongoose.model('Publicacion', PublicacionSchema);
