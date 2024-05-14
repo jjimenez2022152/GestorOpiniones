@@ -66,6 +66,18 @@ export const publicationsGet = async (req, res) => {
     }
 };
 
+export const publicationsGetById = async (req, res) => {
+    try {
+        const {id} = req.params;
+        const publication = await Publication.findById(id);
+
+        res.status(200).json(publication);
+    } catch (error) {
+        console.error('Error al obtener las publicaciones:', error);
+        res.status(500).json({ error: 'Error al obtener las publicaciones' });
+    }
+};
+
 
 
 export const publicationsPut = async (req, res) => {

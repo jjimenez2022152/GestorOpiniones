@@ -2,7 +2,7 @@ import Comment from './coment.model.js';
 import Publication from '../publications/publication.model.js'
 
 export const agregarComentario = async (req, res) => {
-    const { comentario, idPublicacion, comentarioPadre } = req.body;
+    const { comentario, idPublicacion, comentarioPadre, username } = req.body;
 
     try {
         const publication = await Publication.findById(idPublicacion);
@@ -14,6 +14,7 @@ export const agregarComentario = async (req, res) => {
         const comment = new Comment({
             comentario,
             publicacion: idPublicacion,
+            username,
             ...(comentarioPadre ? {comentarioPadre} : {})
         });
 
@@ -37,7 +38,20 @@ export const agregarComentario = async (req, res) => {
 
 export const getComments = async (req, res) => {
     try {
-        const comment = await Comment.find({estado : true});
+        const {postId} = req.params;
+        const comment = await Comment.find({estado : true, publicacion: postId, comentarioPadre: undefined});
+        
+        res.status(200).json(comment);
+    } catch (error) {
+        console.error('Error al obtener comentarios:', error);
+        res.status(500).json({ error: 'Error al obtener los comentarios' });
+    }
+};
+
+export const getCommentsByParentComment = async (req, res) => {
+    try {
+        const {postId, commentId} = req.params;
+        const comment = await Comment.find({estado : true, publicacion: postId, comentarioPadre: commentId});
         
         res.status(200).json(comment);
     } catch (error) {

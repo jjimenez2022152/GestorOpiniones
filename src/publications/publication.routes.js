@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { publicationsPost, publicationsDelete, publicationsGet, publicationsPut } from "./publication.controller.js";
+import { publicationsPost, publicationsDelete, publicationsGet, publicationsPut, publicationsGetById } from "./publication.controller.js";
 import { validarCampos } from "../middlewares/validarCampos.js";
 //import { validarJWT } from "../middlewares/validar-jwt.js";
 
@@ -30,6 +30,11 @@ router.delete(
 router.get(
     "/",
     publicationsGet
+);
+
+router.get(
+    "/:id",
+    publicationsGetById
 );
 
 router.put(
